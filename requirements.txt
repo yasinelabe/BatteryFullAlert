@@ -1,0 +1,6 @@
+psutil
+plyer
+win10toast
+pyqtgraph
+PyQt6
+pygame
