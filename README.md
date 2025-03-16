@@ -71,3 +71,13 @@ The **Battery Full Alert** application is a desktop tool designed to monitor you
    ```bash
    python main.py
    ```
+
+### Generating .exe
+1. Install `pyinstaller` using the following command:
+   ```bash
+   pip install pyinstaller
+   ```
+2. Generate the executable file using the following command:
+   ```bash
+   pyinstaller --onefile --noconsole --windowed  --icon=battery.ico --add-data "battery.ico;."  --clean main.py
+   ```
