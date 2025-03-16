@@ -193,6 +193,16 @@ class BatteryAlertApp(QWidget):
             "color: white; font-size: 14px; font-weight: bold;")
         self.charging_label = QLabel("Charging: Unknown")
         self.charging_label.setStyleSheet("color: lightblue; font-size: 14px;")
+        
+        # Disable mouse interactions (panning/zooming)
+        self.plot_widget.setMouseEnabled(x=False, y=False)
+        
+        # Disable the context menu
+        self.plot_widget.setMenuEnabled(False)
+        
+        # Disable auto-scaling
+        self.plot_widget.enableAutoRange(False)
+
 
         monitoring_layout = QVBoxLayout()
         monitoring_layout.addWidget(self.plot_widget)
